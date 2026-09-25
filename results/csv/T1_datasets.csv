@@ -1,0 +1,4 @@
+dataset,projects_raw,projects_used,features,effort_unit,size_features,dropped_columns,md5,md5_matches_reference,source_url
+COCOMO81,63,63,16,person-months,loc,"project_id, dev_mode",2898f9dca7709ba5dc6384500e97a5f6,True,https://raw.githubusercontent.com/timm/ourmine/master/our/arffs/effest/coc81_1_1.arff
+NASA93,93,93,18,person-months,equivphyskloc,"recordnumber, projectname, cat2, forg, center, year",6bfcb7491cb8c592a7e719a50e086167,True,https://raw.githubusercontent.com/timm/ourmine/master/our/arffs/effest/nasa93.arff
+Desharnais,81,77,11,person-hours,"PointsAdjust, PointsNonAjust",Project,59c5b1a1978986239793ea4c78c504fd,True,https://raw.githubusercontent.com/deepak21188/Software-Development-Effort-Estimation-using-ML/master/desharnais.arff.txt

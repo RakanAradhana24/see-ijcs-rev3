@@ -1,0 +1,31 @@
+SEE_IJCS_rev3 run log
+run started (UTC): 2026-09-25T15:53:18
+run finished (UTC): 2026-09-25T15:56:50
+runtime: 212 s
+platform: Linux-6.6.122+-x86_64-with-glibc2.39
+python: 3.13.15
+numpy: 2.1.3
+pandas: 2.2.3
+scipy: 1.16.3
+scikit-learn: 1.8.0
+matplotlib: 3.10.0
+shap: 0.52.0
+openpyxl: 3.1.5
+[pin] scikit-learn: wanted 1.8.0, found 1.6.1, now 1.8.0
+[pin] shap==0.52.0: already installed
+[version difference] python: this run 3.13.15, reference run 3.12.3
+[version difference] numpy: this run 2.1.3, reference run 2.4.4
+[version difference] pandas: this run 2.2.3, reference run 3.0.2
+[version difference] scipy: this run 1.16.3, reference run 1.17.1
+[version difference] matplotlib: this run 3.10.0, reference run 3.10.8
+seeds: [42, 43, 44, 45, 46, 47, 48, 49, 50, 51]; folds: 10; primary specification: semilog; SD: sample (ddof=1)
+md5 2898f9dca7709ba5dc6384500e97a5f6  coc81_1_1.arff  (matches reference: True)
+md5 6bfcb7491cb8c592a7e719a50e086167  nasa93.arff  (matches reference: True)
+md5 59c5b1a1978986239793ea4c78c504fd  desharnais.arff.txt  (matches reference: True)
+targets where np.log1p of this platform is not correctly rounded (handled by log1p_exact): {'COCOMO81': 2, 'NASA93': 0, 'Desharnais': 0}
+digest_core = 2ce714e5dadd0252
+digest_shap = a025890a6bf76878
+SELF-CHECK core numbers (per_seed, per_fold, inference): PASS
+SELF-CHECK SHAP importance: PASS
+SELF-CHECK headline numbers: 35/35 identical (relative tolerance 1e-6)
+figures: Fig3_perfold_mae, Fig4_specification_ablation, Fig5_cd_diagrams, Fig5alt_cd_diagrams_primary_only, Fig6_shap_summary, FigOpt_extrapolation_case_cocomo81

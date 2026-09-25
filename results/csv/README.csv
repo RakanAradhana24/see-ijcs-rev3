@@ -1,0 +1,20 @@
+sheet,content
+T1_datasets,"Table I: projects, features after encoding, effort unit, size features, dropped columns, md5 of the data file"
+T2_main,"Table II: primary protocol (semi-log target, partition seed 42). Mean, sample SD (ddof=1) and median across the 10 folds; *_best flags the best value at the displayed precision (ties flagged together)"
+T3_ablation,"Table III: MAE under three specifications (raw / semilog / loglog). seed42 = primary partition; mean10, sd10 = mean and sample SD over partitions 42-51"
+T4_stability,"Table IV: stability of the primary protocol over the 10 partitions (mean, SD, CV, min, max, position of seed 42)"
+descriptives,"Effort and size descriptive statistics, skewness before and after ln(1+y)"
+per_fold,dataset x spec x algorithm x fold x 6 metrics (partition seed 42)
+per_seed,dataset x spec x algorithm x seed: mean of the 10 folds for 6 metrics
+friedman,"Friedman chi-square, p, average ranks, CD (per-fold MAE, seed 42) for semilog and loglog"
+nemenyi,Nemenyi post-hoc p per pair and whether the rank difference exceeds CD
+wilcoxon_holm,"Wilcoxon signed-rank per fold (n=10) and per project (out-of-fold absolute errors), raw and Holm-adjusted p; effect sizes"
+effect_sizes,"Vargha-Delaney A12 (probability that the first algorithm has the lower absolute error), Cliff's delta, magnitude, paired win rate"
+inference_summary,"Number of pairs significant after Holm, per fold vs per project"
+ablation,"All six metrics by specification: seed42, mean10, sd10, min10, max10 (long format)"
+shap_importance,"Mean |SHAP| per feature (Random Forest on ln(1+effort)), share, Spearman correlation feature value vs SHAP value"
+rank_summary,"Mean MAE rank of each algorithm over the 10 partitions, per specification"
+rank_18_cells,Mean rank over 3 datasets x 6 metrics (primary protocol): rank-based definition of consistency
+lr_case,"Projects in the fold where Linear Regression (semi-log) fails worst: size, actual effort, LR predictions under the three specifications"
+lr_worst_by_seed,"Per dataset, specification and partition: LR mean MAE, worst fold MAE, and the project with the largest LR error"
+run_info,"Library versions, seeds, definitions used in this run"

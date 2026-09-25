@@ -1,0 +1,4 @@
+dataset,n,effort_min,effort_median,effort_mean,effort_max,skewness,skewness_log1p,size_min[loc],size_max[loc],size_min[equivphyskloc],size_max[equivphyskloc],size_min[PointsAdjust],size_max[PointsAdjust],size_min[PointsNonAjust],size_max[PointsNonAjust]
+COCOMO81,63,5.9,98.0,683.5269841269841,11400.0,4.36784332222379,0.38815197653921735,1.98,1150.0,,,,,,
+NASA93,93,8.4,252.0,624.4118279569893,8211.0,4.188075145311239,-0.0035474844817102633,,,0.9,980.0,,,,
+Desharnais,77,546.0,3542.0,4833.909090909091,23940.0,1.9975261211663256,-0.14139287988379198,,,,,73.0,1127.0,62.0,1116.0

@@ -1,0 +1,19 @@
+item,value
+version[python],3.13.15
+version[numpy],2.1.3
+version[pandas],2.2.3
+version[scipy],1.16.3
+version[scikit-learn],1.8.0
+version[matplotlib],3.10.0
+version[shap],0.52.0
+version[openpyxl],3.1.5
+platform,Linux-6.6.122+-x86_64-with-glibc2.39
+seeds,"[42, 43, 44, 45, 46, 47, 48, 49, 50, 51]"
+n_splits,10
+primary_spec,semilog
+sd_definition,"sample SD, ddof = 1"
+holm_family,10 pairwise comparisons per dataset
+log1p,"correctly rounded (decimal, 50 digits)"
+PRED25_tolerance,1e-09
+np.log1p_not_correctly_rounded_on_this_platform,"{'COCOMO81': 2, 'NASA93': 0, 'Desharnais': 0}"
+run_started_utc,2026-09-25T15:53:18
