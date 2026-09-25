@@ -1,51 +1,127 @@
-# NUMBER_TRACE (preliminary; completed together with the manuscript in Phase 3)
+# NUMBER_TRACE: IJCS_260811Sc, revision 3 (final)
 
-Source workbook: `results/SEE_results_rev3.xlsx` (the same tables are in `results/csv/<sheet>.csv`).
+Traceability of every number in the revised manuscript to the result workbook.
 
-## Table-level mapping
-- Table I  <- sheet `T1_datasets` (columns projects_raw, projects_used, features, effort_unit)
-- Table II <- sheet `T2_main`, row = (dataset, algorithm), columns `<metric>_mean` and `<metric>_sd`; bold = `<metric>_best`
-- Table III <- sheet `T3_ablation`, columns `<spec>_mean10`, `<spec>_sd10` (and `<spec>_seed42`)
-- Table IV <- sheet `T4_stability`
-- Inference tables <- sheets `friedman`, `nemenyi`, `wilcoxon_holm`, `effect_sizes`, `inference_summary`
-- SHAP <- sheet `shap_importance`
+- Manuscript: `main.tex`, revision 3, language-edited version of 25 September 2026.
+- Source workbook: `results/SEE_results_rev3.xlsx` (the same sheets are in `results/csv/<sheet>.csv`).
+- Run: Google Colab, 25 September 2026 (`run_log.txt`); self-check PASS, 35/35 headline numbers identical to the reference run; `digest_core = 2ce714e5dadd0252`.
+- In the manuscript, every in-text result is a LaTeX macro defined in `numbers.tex`, and Tables I to V are generated from the workbook; no number is typed by hand.
 
-## Key in-text numbers
+## Tables
 
-| Number in the manuscript | Cell | Value in this run |
+| Manuscript | Content | Source sheet(s) |
 |---|---|---|
-| LR mean MAE, COCOMO81 (primary protocol) | `T2_main!C2` | 63,492 |
-| LR across-fold median MAE, COCOMO81 | `T2_main!E2` | 315.756 |
-| LR mean SA, COCOMO81 | `T2_main!W2` | -3,395.48 |
-| LR MMRE / MdMRE, COCOMO81 | `T2_main!K2` | 11.4329 |
-| RF MMRE, COCOMO81 | `T2_main!K4` | 0.755711 |
-| RF SA, COCOMO81 | `T2_main!W4` | 65.1924 |
-| RF MMRE, NASA93 | `T2_main!K9` | 0.639569 |
-| RF SA, NASA93 | `T2_main!W9` | 65.8373 |
-| Best PRED(25) of the study (Desharnais, LR) | `T2_main!S12` | 40.5357 |
-| MAE of the failing fold, LR semi-log, COCOMO81 | `lr_case!C2` | 630,801 |
-| Largest project size, COCOMO81 (KLOC) | `descriptives!J2` | 1,150 |
-| Skewness of effort, COCOMO81 | `descriptives!G2` | 4.36784 |
-| Skewness of ln(1+effort), COCOMO81 | `descriptives!H2` | 0.388152 |
-| LR MAE over 10 partitions: mean, COCOMO81 | `T4_stability!C2` | 195,567 |
-| LR MAE over 10 partitions: min, COCOMO81 | `T4_stability!F2` | 39,384.2 |
-| LR MAE over 10 partitions: max, COCOMO81 | `T4_stability!G2` | 995,510 |
-| RF MAE over 10 partitions: mean, COCOMO81 | `T4_stability!C4` | 442.831 |
-| RF MAE over 10 partitions: SD, COCOMO81 | `T4_stability!D4` | 13.4041 |
-| LR MAE over 10 partitions: mean, NASA93 | `T4_stability!C7` | 1,897.95 |
-| Position of seed 42 among partitions, LR NASA93 (1 = lowest MAE) | `T4_stability!I7` | 1 |
-| LR MAE, raw specification, mean of 10 partitions, COCOMO81 | `T3_ablation!D2` | 981.665 |
-| LR MAE, log-log specification, mean of 10 partitions, COCOMO81 | `T3_ablation!J2` | 282.037 |
-| LR MAE, log-log specification, mean of 10 partitions, NASA93 | `T3_ablation!J7` | 254.694 |
-| LR MAE, log-log specification, mean of 10 partitions, Desharnais | `T3_ablation!J12` | 1,809.12 |
-| Friedman p, COCOMO81, semi-log | `friedman!D2` | 0.037817 |
-| Friedman p, NASA93, semi-log | `friedman!D3` | 0.0527048 |
-| Friedman p, Desharnais, semi-log | `friedman!D4` | 0.0103388 |
-| Friedman p, COCOMO81, log-log | `friedman!D5` | 0.000401412 |
-| Nemenyi p, RF-KNN, COCOMO81, semi-log | `nemenyi!F9` | 0.0376961 |
-| Wilcoxon per fold, LR-RF, COCOMO81: raw p | `wilcoxon_holm!E3` | 0.00390625 |
-| Wilcoxon per fold, LR-RF, COCOMO81: Holm p | `wilcoxon_holm!F3` | 0.0390625 |
-| Pairs significant after Holm, per project, COCOMO81, semi-log | `inference_summary!D2` | 3 |
-| Top SHAP feature share (%), COCOMO81 | `shap_importance!E2` | 58.0896 |
-| Top SHAP feature share (%), NASA93 | `shap_importance!E18` | 68.5435 |
-| Top SHAP feature share (%), Desharnais | `shap_importance!E36` | 36.7148 |
+| Table I | Datasets | `T1_datasets` (`projects_used`, `features`, `effort_unit`) |
+| Table II | Performance under the primary protocol (semi-log, seed 42), mean ± SD over folds | `T2_main` (`<metric>_mean`, `<metric>_sd`; bold = `<metric>_best`) |
+| Table III | MAE by model specification, mean ± SD over ten partitions | `T3_ablation` (`<spec>_mean10`, `<spec>_sd10`) |
+| Table IV | Friedman test and significant pairs | `friedman` (`friedman_chi2`, `friedman_p`, `avg_rank_<alg>`) and `inference_summary` |
+| Table V | Pairs significant per project after Holm | `wilcoxon_holm` (`p_fold_holm`, `p_project_holm`, `A12_first_lower_error`, `magnitude`); the effect label is the `magnitude` column, classified on the unrounded Â |
+| Table VI | Related studies | Literature; the "This study" row uses the macros marked *Table VI* below |
+
+## Figures
+
+| Manuscript | File in `figures/` |
+|---|---|
+| Fig. 1 | not generated by the notebook (draw.io diagram) |
+| Fig. 2 | not generated by the notebook (draw.io diagram) |
+| Fig. 3 | `Fig3_perfold_mae` |
+| Fig. 4 | `Fig4_specification_ablation` |
+| Fig. 5 | `FigOpt_extrapolation_case_cocomo81` |
+| Fig. 6 | `Fig5_cd_diagrams` |
+| Fig. 7 | `Fig6_shap_summary` |
+
+## In-text numbers
+
+Listed in order of first appearance. "Value in workbook" is the unrounded cell value; the manuscript shows it rounded. A `+` joins cells that are summed.
+
+| Macro | In manuscript | Workbook cell | Value in workbook | Meaning |
+|---|---|---|---|---|
+| `\LRcocTenMax` | 995,510 | `T4_stability!G2` | 995,510.2 | LR, COCOMO81, semi-log: highest MAE over 10 partitions |
+| `\LRcocTenMin` | 39,384 | `T4_stability!F2` | 39,384.2 | LR, COCOMO81, semi-log: lowest MAE over 10 partitions |
+| `\LRcocMedian` | 315.8 | `T2_main!E2` | 315.756 | LR, COCOMO81: median MAE over folds (primary protocol) |
+| `\BigKLOCcoc` | 1,150 | `descriptives!J2` | 1,150 | COCOMO81: largest project size (KLOC) |
+| `\BigActual` | 6,600 | `lr_case!G3` | 6,600 | Actual effort of the 1,150 KLOC project |
+| `\BigPredSemi` | 3,789,077 | `lr_case!I3` | 3,789,077.4 | Semi-log LR prediction for that project |
+| `\LRcocLogLogTen` | 282.0 | `T3_ablation!J2` | 282.037 | LR, COCOMO81, log-log: MAE, mean over 10 partitions |
+| `\LRdesLogLogTen` | 1,809.1 | `T3_ablation!J12` | 1,809.12 | LR, Desharnais, log-log: MAE, mean over 10 partitions |
+| `\LRnasaLogLogTen` | 254.7 | `T3_ablation!J7` | 254.694 | LR, NASA93, log-log: MAE, mean over 10 partitions |
+| `\SigFoldSemi` | 1 | `inference_summary!C2 + inference_summary!C3 + inference_summary!C4` | 1 | Pairs significant per fold after Holm, semi-log, sum over the three datasets |
+| `\SigProjSemi` | 8 | `inference_summary!D2 + inference_summary!D3 + inference_summary!D4` | 8 | Pairs significant per project after Holm, semi-log, sum over the three datasets |
+| `\Shapcoc` | 58.1 | `shap_importance!E2` | 58.0896 | COCOMO81: share (%) of the top SHAP feature |
+| `\Shapnasa` | 68.5 | `shap_importance!E18` | 68.5435 | NASA93: share (%) of the top SHAP feature |
+| `\ShapDesFP` | 44.0 | `shap_importance!E36 + shap_importance!E40` | 44.0156 | Desharnais: share (%) of the two function-point features (PointsNonAjust + PointsAdjust) |
+| `\BestPREDall` | 46.9 | `ablation!F156` | 46.8667 | Best PRED(25) over all specifications (log-log LR, NASA93, mean of 10 partitions) |
+| `\Skewcoc` | 4.37 | `descriptives!G2` | 4.36784 | COCOMO81: skewness of effort |
+| `\Skewdes` | 2.00 | `descriptives!G4` | 1.99753 | Desharnais: skewness of effort |
+| `\Skewnasa` | 4.19 | `descriptives!G3` | 4.18808 | NASA93: skewness of effort |
+| `\SkewLogcoc` | 0.39 | `descriptives!H2` | 0.388152 | COCOMO81: skewness of effort after ln(1 + y) |
+| `\SkewLogdes` | −0.14 | `descriptives!H4` | -0.141393 | Desharnais: skewness of effort after ln(1 + y) |
+| `\SkewLognasa` | 0.00 | `descriptives!H3` | -0.00354748 | NASA93: skewness of effort after ln(1 + y) |
+| `\RFcocMMRE` | 0.76 | `T2_main!K4` | 0.755711 | RF, COCOMO81: mean MMRE (primary protocol) |
+| `\RFcocSA` | 65.2 | `T2_main!W4` | 65.1924 | RF, COCOMO81: mean SA (%) (primary protocol) |
+| `\RFnasaMMRE` | 0.64 | `T2_main!K9` | 0.639569 | RF, NASA93: mean MMRE (primary protocol) |
+| `\RFnasaSA` | 65.8 | `T2_main!W9` | 65.8373 | RF, NASA93: mean SA (%) (primary protocol) |
+| `\SVRdesSA` | 56.5 | `T2_main!W16` | 56.5174 | SVR, Desharnais: mean SA (%) (primary protocol) |
+| `\RFmeanRank` | 1.50 | `rank_18_cells!B4` | 1.5 | RF: mean rank over the 18 dataset-metric cells |
+| `\RFcellsFirst` | 13 | `rank_18_cells!C4` | 13 | RF: cells (of 18) in which it ranks first |
+| `\SVRmeanRank` | 2.83 | `rank_18_cells!B6` | 2.83333 | SVR: mean rank over the 18 dataset-metric cells |
+| `\RFcocSemiFirst` | 9 | `rank_summary!E9` | 9 | RF, COCOMO81, semi-log: partitions (of 10) in which it has the lowest MAE |
+| `\RFnasaSemiFirst` | 10 | `rank_summary!E24` | 10 | RF, NASA93, semi-log: partitions (of 10) in which it has the lowest MAE |
+| `\RFdesSemiFirst` | 2 | `rank_summary!E39` | 2 | RF, Desharnais, semi-log: partitions (of 10) in which it has the lowest MAE |
+| `\LRcocMAE` | 63,492.0 | `T2_main!C2` | 63,492 | LR, COCOMO81: mean MAE (primary protocol) |
+| `\LRcocSA` | −3,395.5 | `T2_main!W2` | -3,395.48 | LR, COCOMO81: mean SA (%) (primary protocol) |
+| `\LRcocMMRE` | 11.43 | `T2_main!K2` | 11.4329 | LR, COCOMO81: mean MMRE (primary protocol) |
+| `\LRcocMdMRE` | 0.96 | `T2_main!O2` | 0.95657 | LR, COCOMO81: mean MdMRE (primary protocol) |
+| `\BestPRED` | 40.5 | `T2_main!S12` | 40.5357 | Best PRED(25) under the primary protocol (LR, Desharnais) |
+| `\LRcocRawTen` | 981.7 | `T3_ablation!D2` | 981.665 | LR, COCOMO81, no transformation: MAE, mean over 10 partitions |
+| `\LRcocSemiTen` | 195,566.7 | `T3_ablation!G2` | 195,566.7 | LR, COCOMO81, semi-log: MAE, mean over 10 partitions |
+| `\LRnasaRawTen` | 446.3 | `T3_ablation!D7` | 446.324 | LR, NASA93, no transformation: MAE, mean over 10 partitions |
+| `\LRnasaSemiTen` | 1,898.0 | `T3_ablation!G7` | 1,897.95 | LR, NASA93, semi-log: MAE, mean over 10 partitions |
+| `\LRnasaTenMax` | 4,683 | `T4_stability!G7` | 4,683.36 | LR, NASA93, semi-log: highest MAE over 10 partitions |
+| `\LRnasaTenMin` | 883 | `T4_stability!F7` | 882.729 | LR, NASA93, semi-log: lowest MAE over 10 partitions |
+| `\OtherFoldMin` | 156 | `per_fold!E57` | 156.134 | LR, COCOMO81, semi-log, seed 42: lowest MAE among the nine non-failing folds (fold 6) |
+| `\FailFoldMAE` | 630,800.5 | `lr_case!C3` | 630,800.5 | LR, COCOMO81, semi-log, seed 42: MAE of the failing fold |
+| `\OtherFoldMax` | 1,403 | `per_fold!E54` | 1,403.44 | LR, COCOMO81, semi-log, seed 42: highest MAE among the nine non-failing folds (fold 3) |
+| `\BigPredRF` | 837 | `lr_case!K3` | 837.274 | RF (semi-log) prediction for that project |
+| `\BigPredRaw` | 9,501 | `lr_case!H3` | 9,500.66 | LR prediction without transformation for that project |
+| `\BigPredLogLog` | 5,381 | `lr_case!J3` | 5,381.38 | Log-log LR prediction for that project |
+| `\BigKLOCnasa` | 980 | `descriptives!L3` | 980 | NASA93: largest project size (KLOC) |
+| `\LRcocLogLogFirst` | 10 | `rank_summary!E12` | 10 | LR, COCOMO81, log-log: partitions (of 10) in which it has the lowest MAE |
+| `\LRdesLogLogFirst` | 9 | `rank_summary!E42` | 9 | LR, Desharnais, log-log: partitions (of 10) in which it has the lowest MAE |
+| `\LRnasaLogLogFirst` | 9 | `rank_summary!E27` | 9 | LR, NASA93, log-log: partitions (of 10) in which it has the lowest MAE |
+| `\LRcocLogLogSA` | 78.2 | `ablation!E67` | 78.2047 | LR, COCOMO81, log-log: SA (%), primary partition (seed 42) |
+| `\LRcocLogLogPRED` | 44.5 | `ablation!E66` | 44.5238 | LR, COCOMO81, log-log: PRED(25) (%), primary partition (seed 42) |
+| `\DTcocTenMin` | 394.9 | `T4_stability!F3` | 394.876 | DT, COCOMO81, semi-log: lowest MAE over 10 partitions |
+| `\DTcocTenMax` | 792.5 | `T4_stability!G3` | 792.468 | DT, COCOMO81, semi-log: highest MAE over 10 partitions |
+| `\FriedSemicoc` | 0.038 | `friedman!D2` | 0.037817 | Friedman p, COCOMO81, semi-log (per-fold MAE, seed 42) |
+| `\FriedSemides` | 0.010 | `friedman!D4` | 0.0103388 | Friedman p, Desharnais, semi-log (per-fold MAE, seed 42) |
+| `\FriedSeminasa` | 0.053 | `friedman!D3` | 0.0527048 | Friedman p, NASA93, semi-log (per-fold MAE, seed 42) |
+| `\NemCocRFKNN` | 0.038 | `nemenyi!F9` | 0.0376961 | Nemenyi p, COCOMO81, RF vs KNN, semi-log |
+| `\NemDesDTSVR` | 0.025 | `nemenyi!F28` | 0.0248412 | Nemenyi p, Desharnais, DT vs SVR, semi-log |
+| `\NemDesLRDT` | 0.016 | `nemenyi!F22` | 0.015995 | Nemenyi p, Desharnais, LR vs DT, semi-log |
+| `\NemDesDTRF` | 0.056 | `nemenyi!F26` | 0.0558681 | Nemenyi p, Desharnais, DT vs RF, semi-log |
+| `\WilCocLRRFraw` | 0.004 | `wilcoxon_holm!E3` | 0.00390625 | Wilcoxon LR vs RF, COCOMO81, semi-log: per-fold p (unadjusted) |
+| `\WilCocLRRFholm` | 0.039 | `wilcoxon_holm!F3` | 0.0390625 | Wilcoxon LR vs RF, COCOMO81, semi-log: per-fold p (Holm) |
+| `\WilCocLRRFproj` | 0.266 | `wilcoxon_holm!I3` | 0.266315 | Wilcoxon LR vs RF, COCOMO81, semi-log: per-project p (Holm) |
+| `\SigProjLogLog` | 12 | `inference_summary!D5 + inference_summary!D6 + inference_summary!D7` | 12 | Pairs significant per project after Holm, log-log, sum over the three datasets |
+| `\Shapdes` | 36.7 | `shap_importance!E36` | 36.7148 | Desharnais: share (%) of the top SHAP feature |
+| `\ShapRhococ` | 0.98 | `shap_importance!F2` | 0.981816 | COCOMO81: Spearman correlation of the top feature with its SHAP value |
+| `\ShapRhodes` | 0.94 | `shap_importance!F36` | 0.941478 | Desharnais: Spearman correlation of the top feature with its SHAP value |
+| `\ShapRhonasa` | 0.98 | `shap_importance!F18` | 0.97949 | NASA93: Spearman correlation of the top feature with its SHAP value |
+| `\LRcocPRED` | 14.5 | `T2_main!S2` | 14.5238 | LR, COCOMO81: mean PRED(25) (%) (primary protocol) |
+| `\LRcocLogLogRMSE` | 541.8 | `ablation!E63` | 541.841 | LR, COCOMO81, log-log: RMSE, primary partition (seed 42) (Table VI) |
+| `\LRdesLogLogRMSE` | 2,553.3 | `ablation!E243` | 2,553.33 | LR, Desharnais, log-log: RMSE, primary partition (seed 42) (Table VI) |
+| `\LRnasaLogLogRMSE` | 421.6 | `ablation!E153` | 421.605 | LR, NASA93, log-log: RMSE, primary partition (seed 42) (Table VI) |
+
+## Numbers taken from the data files
+
+| In manuscript | Source |
+|---|---|
+| 63, 93, 81 (77 used) projects | `T1_datasets` (`projects_raw`, `projects_used`) |
+| The 1,150 KLOC project is "more than twice the size of any other project" (next largest: 464 KLOC) | `data/coc81_1_1.arff`, attribute `loc` |
+
+## Notes
+
+- `numbers.tex` defines 143 macros; the 76 listed above are the ones printed in the manuscript. The others are kept for completeness and are not shown.
+- The log-log LR values for RMSE, PRED(25), and SA are taken from the primary partition (seed 42, `ablation` column `seed42`), as stated in the text for SA and PRED(25); the log-log MAE values are means over ten partitions (`T3_ablation`).
+- Counts marked "sum over the three datasets" add the corresponding cells of `inference_summary`.
