@@ -1,0 +1,7 @@
+dataset,spec,LR,DT,RF,KNN,SVR,GB
+COCOMO81,semilog,0,0,0,0,0,10
+COCOMO81,loglog,7,0,0,0,3,0
+NASA93,semilog,0,0,1,0,0,9
+NASA93,loglog,2,0,0,0,8,0
+Desharnais,semilog,2,0,1,3,2,2
+Desharnais,loglog,8,0,0,1,1,0

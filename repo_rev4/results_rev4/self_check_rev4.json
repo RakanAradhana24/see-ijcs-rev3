@@ -1,0 +1,483 @@
+{
+ "digest_default5": "8c0755c03e052934",
+ "digest_gb_default": "c52972156e5824e8",
+ "digest_tuned": {
+  "DT": "50ff210ae90a403a",
+  "RF": "c5013a85797a5167",
+  "KNN": "bb1689c6ae5385e8",
+  "SVR": "2d3d1831ebaa441f",
+  "GB": "55c8054118deaefb"
+ },
+ "digest_all": "8914f89bd7cf67b8",
+ "mae_mean10": [
+  {
+   "dataset": "COCOMO81",
+   "spec": "semilog",
+   "algorithm": "LR",
+   "arm": "default",
+   "ref": 195566.6927181017
+  },
+  {
+   "dataset": "COCOMO81",
+   "spec": "semilog",
+   "algorithm": "DT",
+   "arm": "default",
+   "ref": 564.6267380952382
+  },
+  {
+   "dataset": "COCOMO81",
+   "spec": "semilog",
+   "algorithm": "DT",
+   "arm": "tuned",
+   "ref": 548.1738116543703
+  },
+  {
+   "dataset": "COCOMO81",
+   "spec": "semilog",
+   "algorithm": "RF",
+   "arm": "default",
+   "ref": 442.83133973070187
+  },
+  {
+   "dataset": "COCOMO81",
+   "spec": "semilog",
+   "algorithm": "RF",
+   "arm": "tuned",
+   "ref": 473.78766651601245
+  },
+  {
+   "dataset": "COCOMO81",
+   "spec": "semilog",
+   "algorithm": "KNN",
+   "arm": "default",
+   "ref": 579.4657144190462
+  },
+  {
+   "dataset": "COCOMO81",
+   "spec": "semilog",
+   "algorithm": "KNN",
+   "arm": "tuned",
+   "ref": 581.334154228874
+  },
+  {
+   "dataset": "COCOMO81",
+   "spec": "semilog",
+   "algorithm": "SVR",
+   "arm": "default",
+   "ref": 592.0890881365133
+  },
+  {
+   "dataset": "COCOMO81",
+   "spec": "semilog",
+   "algorithm": "SVR",
+   "arm": "tuned",
+   "ref": 422.37482006181983
+  },
+  {
+   "dataset": "COCOMO81",
+   "spec": "semilog",
+   "algorithm": "GB",
+   "arm": "default",
+   "ref": 384.5695129522345
+  },
+  {
+   "dataset": "COCOMO81",
+   "spec": "semilog",
+   "algorithm": "GB",
+   "arm": "tuned",
+   "ref": 350.76982047695395
+  },
+  {
+   "dataset": "COCOMO81",
+   "spec": "loglog",
+   "algorithm": "LR",
+   "arm": "default",
+   "ref": 282.03676231659495
+  },
+  {
+   "dataset": "COCOMO81",
+   "spec": "loglog",
+   "algorithm": "DT",
+   "arm": "default",
+   "ref": 564.9793571428572
+  },
+  {
+   "dataset": "COCOMO81",
+   "spec": "loglog",
+   "algorithm": "DT",
+   "arm": "tuned",
+   "ref": 556.4879334116738
+  },
+  {
+   "dataset": "COCOMO81",
+   "spec": "loglog",
+   "algorithm": "RF",
+   "arm": "default",
+   "ref": 442.490982677394
+  },
+  {
+   "dataset": "COCOMO81",
+   "spec": "loglog",
+   "algorithm": "RF",
+   "arm": "tuned",
+   "ref": 475.62604209796353
+  },
+  {
+   "dataset": "COCOMO81",
+   "spec": "loglog",
+   "algorithm": "KNN",
+   "arm": "default",
+   "ref": 598.0582310199175
+  },
+  {
+   "dataset": "COCOMO81",
+   "spec": "loglog",
+   "algorithm": "KNN",
+   "arm": "tuned",
+   "ref": 576.6036801188396
+  },
+  {
+   "dataset": "COCOMO81",
+   "spec": "loglog",
+   "algorithm": "SVR",
+   "arm": "default",
+   "ref": 543.8471392666238
+  },
+  {
+   "dataset": "COCOMO81",
+   "spec": "loglog",
+   "algorithm": "SVR",
+   "arm": "tuned",
+   "ref": 292.2216515878255
+  },
+  {
+   "dataset": "COCOMO81",
+   "spec": "loglog",
+   "algorithm": "GB",
+   "arm": "default",
+   "ref": 385.98172289484455
+  },
+  {
+   "dataset": "COCOMO81",
+   "spec": "loglog",
+   "algorithm": "GB",
+   "arm": "tuned",
+   "ref": 351.20447970910504
+  },
+  {
+   "dataset": "NASA93",
+   "spec": "semilog",
+   "algorithm": "LR",
+   "arm": "default",
+   "ref": 1897.9539213762484
+  },
+  {
+   "dataset": "NASA93",
+   "spec": "semilog",
+   "algorithm": "DT",
+   "arm": "default",
+   "ref": 412.20206194529965
+  },
+  {
+   "dataset": "NASA93",
+   "spec": "semilog",
+   "algorithm": "DT",
+   "arm": "tuned",
+   "ref": 393.24636166226014
+  },
+  {
+   "dataset": "NASA93",
+   "spec": "semilog",
+   "algorithm": "RF",
+   "arm": "default",
+   "ref": 298.59888058667866
+  },
+  {
+   "dataset": "NASA93",
+   "spec": "semilog",
+   "algorithm": "RF",
+   "arm": "tuned",
+   "ref": 317.61155942171547
+  },
+  {
+   "dataset": "NASA93",
+   "spec": "semilog",
+   "algorithm": "KNN",
+   "arm": "default",
+   "ref": 429.51520544176253
+  },
+  {
+   "dataset": "NASA93",
+   "spec": "semilog",
+   "algorithm": "KNN",
+   "arm": "tuned",
+   "ref": 429.90901338496144
+  },
+  {
+   "dataset": "NASA93",
+   "spec": "semilog",
+   "algorithm": "SVR",
+   "arm": "default",
+   "ref": 388.41063247010703
+  },
+  {
+   "dataset": "NASA93",
+   "spec": "semilog",
+   "algorithm": "SVR",
+   "arm": "tuned",
+   "ref": 496.14051293599607
+  },
+  {
+   "dataset": "NASA93",
+   "spec": "semilog",
+   "algorithm": "GB",
+   "arm": "default",
+   "ref": 289.87839820694956
+  },
+  {
+   "dataset": "NASA93",
+   "spec": "semilog",
+   "algorithm": "GB",
+   "arm": "tuned",
+   "ref": 294.5218619122121
+  },
+  {
+   "dataset": "NASA93",
+   "spec": "loglog",
+   "algorithm": "LR",
+   "arm": "default",
+   "ref": 254.6937739764077
+  },
+  {
+   "dataset": "NASA93",
+   "spec": "loglog",
+   "algorithm": "DT",
+   "arm": "default",
+   "ref": 413.9613063897441
+  },
+  {
+   "dataset": "NASA93",
+   "spec": "loglog",
+   "algorithm": "DT",
+   "arm": "tuned",
+   "ref": 393.2230421847886
+  },
+  {
+   "dataset": "NASA93",
+   "spec": "loglog",
+   "algorithm": "RF",
+   "arm": "default",
+   "ref": 297.69073365469416
+  },
+  {
+   "dataset": "NASA93",
+   "spec": "loglog",
+   "algorithm": "RF",
+   "arm": "tuned",
+   "ref": 314.68805176142234
+  },
+  {
+   "dataset": "NASA93",
+   "spec": "loglog",
+   "algorithm": "KNN",
+   "arm": "default",
+   "ref": 441.5019168944332
+  },
+  {
+   "dataset": "NASA93",
+   "spec": "loglog",
+   "algorithm": "KNN",
+   "arm": "tuned",
+   "ref": 393.59935722427247
+  },
+  {
+   "dataset": "NASA93",
+   "spec": "loglog",
+   "algorithm": "SVR",
+   "arm": "default",
+   "ref": 344.8565624150391
+  },
+  {
+   "dataset": "NASA93",
+   "spec": "loglog",
+   "algorithm": "SVR",
+   "arm": "tuned",
+   "ref": 221.9572055117531
+  },
+  {
+   "dataset": "NASA93",
+   "spec": "loglog",
+   "algorithm": "GB",
+   "arm": "default",
+   "ref": 287.32327572089457
+  },
+  {
+   "dataset": "NASA93",
+   "spec": "loglog",
+   "algorithm": "GB",
+   "arm": "tuned",
+   "ref": 294.89224241021213
+  },
+  {
+   "dataset": "Desharnais",
+   "spec": "semilog",
+   "algorithm": "LR",
+   "arm": "default",
+   "ref": 2001.8753498023154
+  },
+  {
+   "dataset": "Desharnais",
+   "spec": "semilog",
+   "algorithm": "DT",
+   "arm": "default",
+   "ref": 2506.6310714285714
+  },
+  {
+   "dataset": "Desharnais",
+   "spec": "semilog",
+   "algorithm": "DT",
+   "arm": "tuned",
+   "ref": 2275.7520791346337
+  },
+  {
+   "dataset": "Desharnais",
+   "spec": "semilog",
+   "algorithm": "RF",
+   "arm": "default",
+   "ref": 1982.8086078580468
+  },
+  {
+   "dataset": "Desharnais",
+   "spec": "semilog",
+   "algorithm": "RF",
+   "arm": "tuned",
+   "ref": 1987.6905233964485
+  },
+  {
+   "dataset": "Desharnais",
+   "spec": "semilog",
+   "algorithm": "KNN",
+   "arm": "default",
+   "ref": 1981.0103655070805
+  },
+  {
+   "dataset": "Desharnais",
+   "spec": "semilog",
+   "algorithm": "KNN",
+   "arm": "tuned",
+   "ref": 1992.463426417776
+  },
+  {
+   "dataset": "Desharnais",
+   "spec": "semilog",
+   "algorithm": "SVR",
+   "arm": "default",
+   "ref": 1958.4339568013802
+  },
+  {
+   "dataset": "Desharnais",
+   "spec": "semilog",
+   "algorithm": "SVR",
+   "arm": "tuned",
+   "ref": 2022.2418239716942
+  },
+  {
+   "dataset": "Desharnais",
+   "spec": "semilog",
+   "algorithm": "GB",
+   "arm": "default",
+   "ref": 2112.5896427128455
+  },
+  {
+   "dataset": "Desharnais",
+   "spec": "semilog",
+   "algorithm": "GB",
+   "arm": "tuned",
+   "ref": 2022.3491043790884
+  },
+  {
+   "dataset": "Desharnais",
+   "spec": "loglog",
+   "algorithm": "LR",
+   "arm": "default",
+   "ref": 1809.1202746157974
+  },
+  {
+   "dataset": "Desharnais",
+   "spec": "loglog",
+   "algorithm": "DT",
+   "arm": "default",
+   "ref": 2503.8260714285716
+  },
+  {
+   "dataset": "Desharnais",
+   "spec": "loglog",
+   "algorithm": "DT",
+   "arm": "tuned",
+   "ref": 2275.291780245081
+  },
+  {
+   "dataset": "Desharnais",
+   "spec": "loglog",
+   "algorithm": "RF",
+   "arm": "default",
+   "ref": 1982.285524927304
+  },
+  {
+   "dataset": "Desharnais",
+   "spec": "loglog",
+   "algorithm": "RF",
+   "arm": "tuned",
+   "ref": 1990.710631639909
+  },
+  {
+   "dataset": "Desharnais",
+   "spec": "loglog",
+   "algorithm": "KNN",
+   "arm": "default",
+   "ref": 1935.6612795045166
+  },
+  {
+   "dataset": "Desharnais",
+   "spec": "loglog",
+   "algorithm": "KNN",
+   "arm": "tuned",
+   "ref": 2023.4679358298733
+  },
+  {
+   "dataset": "Desharnais",
+   "spec": "loglog",
+   "algorithm": "SVR",
+   "arm": "default",
+   "ref": 1916.4715258293902
+  },
+  {
+   "dataset": "Desharnais",
+   "spec": "loglog",
+   "algorithm": "SVR",
+   "arm": "tuned",
+   "ref": 1880.3247532323949
+  },
+  {
+   "dataset": "Desharnais",
+   "spec": "loglog",
+   "algorithm": "GB",
+   "arm": "default",
+   "ref": 2111.971379124781
+  },
+  {
+   "dataset": "Desharnais",
+   "spec": "loglog",
+   "algorithm": "GB",
+   "arm": "tuned",
+   "ref": 2029.627227800016
+  }
+ ],
+ "versions": {
+  "python": "3.13.18",
+  "numpy": "2.4.6",
+  "pandas": "2.2.3",
+  "scipy": "1.16.3",
+  "scikit-learn": "1.8.0"
+ }
+}

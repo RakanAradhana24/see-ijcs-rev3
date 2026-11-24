@@ -1,0 +1,29 @@
+SEE_IJCS_rev4_tuning run log
+run finished (UTC): 2026-11-15T18:36:10
+runtime: 3943 s
+platform: Linux-6.6.159+-x86_64-with-glibc2.39
+python: 3.13.18
+numpy: 2.4.6
+pandas: 2.2.3
+scipy: 1.16.3
+scikit-learn: 1.8.0
+[pin] scikit-learn: wanted 1.8.0, found 1.6.1, now 1.8.0
+outer folds: 10; inner folds: 5; partitions: [42, 43, 44, 45, 46, 47, 48, 49, 50, 51]
+digest_default5 = 8c0755c03e052934
+digest_gb_default = c52972156e5824e8
+digest_tuned[DT] = 50ff210ae90a403a
+digest_tuned[RF] = c5013a85797a5167
+digest_tuned[KNN] = bb1689c6ae5385e8
+digest_tuned[SVR] = 2d3d1831ebaa441f
+digest_tuned[GB] = 55c8054118deaefb
+digest_all = 8914f89bd7cf67b8
+SELF-CHECK rev3 headline numbers (LR, log-log): PASS
+SELF-CHECK default arm, five rev3 learners: PASS
+SELF-CHECK GB default: PASS
+SELF-CHECK tuned DT: PASS
+SELF-CHECK tuned RF: PASS
+SELF-CHECK tuned KNN: DIFFERENT
+SELF-CHECK tuned SVR: PASS
+SELF-CHECK tuned GB: PASS
+SELF-CHECK all numbers: DIFFERENT
+largest relative difference in mean MAE from the reference run: 2.187e-09 (66 cells)

@@ -1,0 +1,31 @@
+dataset,spec,algorithm,parameters,most_selected,share_percent,distinct_settings_selected
+COCOMO81,semilog,DT,"max_depth, min_samples_leaf","None, 3",22.0,8
+COCOMO81,semilog,RF,"max_features, min_samples_leaf","0.5, 1",59.0,3
+COCOMO81,semilog,KNN,"n_neighbors, weights","3, distance",34.0,4
+COCOMO81,semilog,SVR,"C, epsilon, gamma","100.0, 0.5, 0.01",63.0,7
+COCOMO81,semilog,GB,"learning_rate, max_depth","0.1, 2",96.0,3
+COCOMO81,loglog,DT,"max_depth, min_samples_leaf","None, 1",22.0,8
+COCOMO81,loglog,RF,"max_features, min_samples_leaf","0.5, 1",65.0,3
+COCOMO81,loglog,KNN,"n_neighbors, weights","9, distance",31.0,4
+COCOMO81,loglog,SVR,"C, epsilon, gamma","10.0, 0.01, 0.01",33.0,4
+COCOMO81,loglog,GB,"learning_rate, max_depth","0.1, 2",96.0,3
+NASA93,semilog,DT,"max_depth, min_samples_leaf","5, 3",25.0,8
+NASA93,semilog,RF,"max_features, min_samples_leaf","1.0, 1",66.0,3
+NASA93,semilog,KNN,"n_neighbors, weights","9, distance",46.0,6
+NASA93,semilog,SVR,"C, epsilon, gamma","100.0, 0.1, 0.1",46.0,5
+NASA93,semilog,GB,"learning_rate, max_depth","0.05, 2",30.0,4
+NASA93,loglog,DT,"max_depth, min_samples_leaf","5, 3",25.0,8
+NASA93,loglog,RF,"max_features, min_samples_leaf","1.0, 1",71.0,3
+NASA93,loglog,KNN,"n_neighbors, weights","7, distance",56.0,5
+NASA93,loglog,SVR,"C, epsilon, gamma","10.0, 0.01, 0.01",52.0,4
+NASA93,loglog,GB,"learning_rate, max_depth","0.05, 2",29.0,4
+Desharnais,semilog,DT,"max_depth, min_samples_leaf","3, 1",42.0,8
+Desharnais,semilog,RF,"max_features, min_samples_leaf","1.0, 1",69.0,4
+Desharnais,semilog,KNN,"n_neighbors, weights","5, distance",49.0,6
+Desharnais,semilog,SVR,"C, epsilon, gamma","10.0, 0.5, 0.01",54.0,10
+Desharnais,semilog,GB,"learning_rate, max_depth","0.05, 2",75.0,4
+Desharnais,loglog,DT,"max_depth, min_samples_leaf","3, 1",43.0,8
+Desharnais,loglog,RF,"max_features, min_samples_leaf","1.0, 1",67.0,4
+Desharnais,loglog,KNN,"n_neighbors, weights","5, distance",36.0,7
+Desharnais,loglog,SVR,"C, epsilon, gamma","100.0, 0.5, 0.01",59.0,6
+Desharnais,loglog,GB,"learning_rate, max_depth","0.05, 2",73.0,4

@@ -1,0 +1,19 @@
+dataset,spec,setting,best,best_MAE,second,second_MAE,order
+COCOMO81,semilog,"rev3 (five learners, default)",RF,442.83133973070187,DT,564.6267380952382,RF < DT < KNN < SVR < LR
+COCOMO81,semilog,"default, with GB",GB,384.5695129522345,RF,442.83133973070187,GB < RF < DT < KNN < SVR < LR
+COCOMO81,semilog,"tuned where applicable, with GB",GB,350.76982047695395,SVR,422.37482006181983,GB < SVR < RF < DT < KNN < LR
+COCOMO81,loglog,"rev3 (five learners, default)",LR,282.03676231659495,RF,442.490982677394,LR < RF < SVR < DT < KNN
+COCOMO81,loglog,"default, with GB",LR,282.03676231659495,GB,385.98172289484455,LR < GB < RF < SVR < DT < KNN
+COCOMO81,loglog,"tuned where applicable, with GB",LR,282.03676231659495,SVR,292.2216515878255,LR < SVR < GB < RF < DT < KNN
+NASA93,semilog,"rev3 (five learners, default)",RF,298.59888058667866,SVR,388.41063247010703,RF < SVR < DT < KNN < LR
+NASA93,semilog,"default, with GB",GB,289.87839820694956,RF,298.59888058667866,GB < RF < SVR < DT < KNN < LR
+NASA93,semilog,"tuned where applicable, with GB",GB,294.5218619122121,RF,317.61155942171547,GB < RF < DT < KNN < SVR < LR
+NASA93,loglog,"rev3 (five learners, default)",LR,254.6937739764077,RF,297.69073365469416,LR < RF < SVR < DT < KNN
+NASA93,loglog,"default, with GB",LR,254.6937739764077,GB,287.32327572089457,LR < GB < RF < SVR < DT < KNN
+NASA93,loglog,"tuned where applicable, with GB",SVR,221.9572055117531,LR,254.6937739764077,SVR < LR < GB < RF < DT < KNN
+Desharnais,semilog,"rev3 (five learners, default)",SVR,1958.4339568013802,KNN,1981.0103655070805,SVR < KNN < RF < LR < DT
+Desharnais,semilog,"default, with GB",SVR,1958.4339568013802,KNN,1981.0103655070805,SVR < KNN < RF < LR < GB < DT
+Desharnais,semilog,"tuned where applicable, with GB",RF,1987.6905233964485,KNN,1992.463426417776,RF < KNN < LR < SVR < GB < DT
+Desharnais,loglog,"rev3 (five learners, default)",LR,1809.1202746157974,SVR,1916.4715258293902,LR < SVR < KNN < RF < DT
+Desharnais,loglog,"default, with GB",LR,1809.1202746157974,SVR,1916.4715258293902,LR < SVR < KNN < RF < GB < DT
+Desharnais,loglog,"tuned where applicable, with GB",LR,1809.1202746157974,SVR,1880.3247532323949,LR < SVR < RF < KNN < GB < DT
